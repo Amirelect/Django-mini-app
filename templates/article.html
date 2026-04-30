@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block articles %}
+    <ul>
+        {% for item in article_list %}
+            <li>
+                <a href="#">{{ item.title }}</a>
+                <span>{{ item.article }}</span>
+            </li>
+            <br>
+        {% endfor %}
+    </ul>
+{% endblock %}

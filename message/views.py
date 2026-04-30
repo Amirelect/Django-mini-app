@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import TemplateView, ListView
-from .models import Message
+from .models import Message, Article
 
 # def messageView(request):
 #     return render(request, 'home.html')
@@ -17,3 +17,7 @@ from .models import Message
 class MessageView(ListView):
     model = Message    
     template_name = 'home.html'
+    
+class ArticleView(ListView):
+    model = Article
+    template_name = 'article.html'
