@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Hello my dear Amir!</h1>    
-    <h1>This is Class base view</h1>    
-    <h1>This is Class base view generic</h1>    
+    <ul>
+        {% for item in message_list %}
+            <li>
+                {{ item.text }}
+            </li>
+        {% endfor %}
+    </ul>    
 {% endblock %}
