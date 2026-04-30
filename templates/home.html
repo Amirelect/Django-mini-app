@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>
-        hello mr profesional!
-    </h1>
+    <ul>
+        {% for item in message_list %}
+            <li>
+                {{ item.text }}
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
