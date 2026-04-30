@@ -1,4 +1,6 @@
-from django.shortcuts import render
 
-def message_view(request):
-    return render(request, 'home.html')
+from django.views.generic import TemplateView
+
+class MessageView(TemplateView):
+    template_name = 'home.html'
+    
